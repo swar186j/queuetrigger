@@ -7,5 +7,6 @@
 			"queueName": "test-nsg-queue",
 			"connection": "AzureWebJobsStorage"
 		}
-	]
+	],
+	"scriptFile": "function_app.py"
 }
