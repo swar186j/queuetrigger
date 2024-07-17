@@ -1,21 +1,20 @@
 import subprocess
 import sys
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-install('requests')
-logger.info("Successfully installed Requests module")
-install('azure-functions')
-logger.info("Successfully installed azure-functions module")
-install('azure-storage-blob')
-logger.info("Successfully installed azure-storage-blob module")
-        
-import requests
-import azure.functions as func
 import time
 import logging
 import json
 import os
 from urllib.parse import unquote
+
+def install():
+    subprocess.check_call([sys.executable, "-m", "pip", "install","-r", "requirements.txt"])
+    logging.info("Successfully installed requirements module")
+install()
+
+
+        
+import requests
+import azure.functions as func
 from azure.storage.blob import BlobServiceClient,BlobLeaseClient
 
 app = func.FunctionApp()
