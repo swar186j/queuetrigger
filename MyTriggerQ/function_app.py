@@ -23,7 +23,7 @@ def install(package):
         
 
 
-for package in ['requests','azure-functions','azure-storage-blob']:
+for package in ['requests','azure-functions','azure-storage','azure-storage-blob']:
     install(package)
 
         
