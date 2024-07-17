@@ -5,7 +5,6 @@ def install(package):
 install('requests')
 install('azure-functions')
 install('azure-storage-blob')
-install('urlib')
 
 import requests
 import azure.functions as func
