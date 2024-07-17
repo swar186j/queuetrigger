@@ -1,7 +1,4 @@
 azure-functions
 azure-storage-blob
-urlib
-json
-os
-time
+requests
 
