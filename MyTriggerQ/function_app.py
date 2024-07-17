@@ -3,6 +3,9 @@ import sys
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 install('requests')
+install('azure-functions')
+install('azure-storage-blob')
+install('urlib')
 
 import requests
 import azure.functions as func
@@ -11,7 +14,6 @@ import logging
 import json
 import os
 from urllib.parse import unquote
-
 from azure.storage.blob import BlobServiceClient,BlobLeaseClient
 
 app = func.FunctionApp()
