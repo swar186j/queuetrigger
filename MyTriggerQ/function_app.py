@@ -3,9 +3,12 @@ import sys
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 install('requests')
+logger.info("Successfully installed Requests module")
 install('azure-functions')
+logger.info("Successfully installed azure-functions module")
 install('azure-storage-blob')
-
+logger.info("Successfully installed azure-storage-blob module")
+        
 import requests
 import azure.functions as func
 import time
