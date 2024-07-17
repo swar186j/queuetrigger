@@ -1,11 +1,18 @@
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+install('requests')
+
+import requests
 import azure.functions as func
 import time
 import logging
 import json
 import os
 from urllib.parse import unquote
-import requests
+
 from azure.storage.blob import BlobServiceClient,BlobLeaseClient
+import subprocess
+import sys
 
 app = func.FunctionApp()
 
