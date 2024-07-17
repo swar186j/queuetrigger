@@ -6,25 +6,31 @@ import json
 import os
 from urllib.parse import unquote
 
+
+logging.info("Process started------")
+os.system("pip install requests")
+# os.system("pip install azure-functions")
+os.system("pip install azure-storage-blob")
+
 # def install():
 #     subprocess.check_call([sys.executable, "-m", "pip", "install","-r", "requirements.txt"])
 #     logging.info("Successfully installed requirements module")
 # install()
-def install(package):
-    # This function will install a package if it is not present
-    from importlib import import_module
-    try:
-        import_module(package)
-    except:
-        from sys import executable as se
-        from subprocess import check_call
-        check_call([se,'-m','pip','-q','install',package])
-        logging.info("Successfully installed python modules")
+# def install(package):
+#     # This function will install a package if it is not present
+#     from importlib import import_module
+#     try:
+#         import_module(package)
+#     except:
+#         from sys import executable as se
+#         from subprocess import check_call
+#         check_call([se,'-m','pip','-q','install',package])
+#         logging.info("Successfully installed python modules")
         
 
 
-for package in ['requests','azure-functions','azure-storage','azure-storage-blob']:
-    install(package)
+# for package in ['requests','azure-functions','azure-storage','azure-storage-blob']:
+#     install(package)
 
         
 import requests
