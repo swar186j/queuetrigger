@@ -39,7 +39,7 @@ from azure.storage.blob import BlobServiceClient,BlobLeaseClient
 
 app = func.FunctionApp()
 
-@app.queue_trigger(arg_name="azqueue", queue_name="test-nsg-queue-1",
+@app.queue_trigger(arg_name="azqueue", queue_name="test-nsg-queue",
                                connection="AzureWebJobsStorage") 
 def queue_trigger(azqueue: func.QueueMessage):
     logging.info('Python Queue trigger processed a message: %s',
