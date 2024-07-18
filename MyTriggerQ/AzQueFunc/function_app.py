@@ -8,9 +8,9 @@ from urllib.parse import unquote
 
 
 logging.info("Process started------")
-os.system("pip install requests")
-# os.system("pip install azure-functions")
-os.system("pip install azure-storage-blob")
+# os.system("pip install requests")
+# # os.system("pip install azure-functions")
+# os.system("pip install azure-storage-blob")
 
 # def install():
 #     subprocess.check_call([sys.executable, "-m", "pip", "install","-r", "requirements.txt"])
@@ -39,7 +39,7 @@ from azure.storage.blob import BlobServiceClient,BlobLeaseClient
 
 app = func.FunctionApp()
 
-@app.queue_trigger(arg_name="azqueue", queue_name="test-nsg-queue",
+@app.queue_trigger(arg_name="azqueue", queue_name="test-nsg-queue-1",
                                connection="AzureWebJobsStorage") 
 def queue_trigger(azqueue: func.QueueMessage):
     logging.info('Python Queue trigger processed a message: %s',
