@@ -4,7 +4,7 @@
 			"name": "azqueue",
 			"type": "queueTrigger",
 			"direction": "in",
-			"queueName": "test-nsg-queue",
+			"queueName": "test-nsg-queue-1",
 			"connection": "AzureWebJobsStorage"
 		}
 	],
